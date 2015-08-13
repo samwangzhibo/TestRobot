@@ -20,11 +20,11 @@ public class MainTest {
 		while(scan.hasNext()){
 			String info = scan.nextLine();
 			System.out.println("输入info为："+info);
-				//INFO = URLEncoder.encode(info, "utf-8");
+				INFO = URLEncoder.encode(info, "utf-8");
 				
-				byte[] b = info.getBytes("utf-8");
-		        
-		        INFO =new String(b,"utf-8");
+				//byte[] b = info.getBytes("utf-8");  
+		        //INFO =new String(b,"utf-8");
+				
 				String getUrl = util.API_ENTRY+"?key="+util.APIKEY+"&info="+INFO;
 				URL url;
 				url = new URL(getUrl);
